@@ -1,38 +1,280 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: hsl(228, 33%, 97%);
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  width: 100vw;
+}
+.comments-container{
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 0px;
+  width: 100%;
+}
+.comment-container{
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: hsl(211, 10%, 45%);
+  flex-grow: 1;
+}
+.comment-wrapper{
+  width: 100%;
+}
+.profile-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.profile-img{
+  height: 32px;
+  width: 32px;
+  margin-right: 12px;
+}
+.username-text{
+  font-weight: 700;
+  color: black;
+  margin-right: 12px;
+}
+.comment-text{
+  text-align: left;
+}
+.comment-interact-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.score-container{
+  background-color: hsl(228, 33%, 97%);
+  width: 80px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score{
+  font-weight: 700;
+  margin: 0px 12px;
+  color: hsl(238, 40%, 52%);
+}
+.score-icon:hover path{
+  cursor: pointer;
+  fill: hsl(238, 40%, 52%);
+}
+.reply-activate-button{
+  background-color: transparent;
+  border: none;
+  color: hsl(238, 40%, 52%);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+.reply-activate-button:hover{
+  color: hsl(239, 57%, 85%);
+  cursor: pointer;
+}
+.reply-activate-button:hover .reply-icon path{
+  fill: hsl(239, 57%, 85%);
+}
+.replies-container{
+  border-left: 2px solid hsl(210, 3%, 87%);
+  padding-left: 8px;
+}
+.add-comment-wrapper{
+  width: 100%;
+}
+.add-comment-container{
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.comment-text-area{
+  width: 100%;
+  border: 1px solid hsl(210, 3%, 87%);
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.comment-text-area:hover{
+  border: 1px solid hsl(238, 40%, 52%);
+  cursor: pointer;
+}
+.submit-button{
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
   color: white;
+  font-size: 12px;
+  font-weight: 400;
+}
+.submit-button:hover{
+  cursor: pointer;
+  background-color: hsl(239, 57%, 85%);
+}
+.submit-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.add-reply-comment-container{
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.replying-to-text{
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+.delete-button{
+  background-color: transparent;
+  border: none;
+  color: hsl(358, 79%, 66%);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+.delete-button:hover{
+  color: hsl(357, 100%, 86%);
+  cursor: pointer;
+}
+.delete-button:hover .delete-icon path{
+  fill: hsl(357, 100%, 86%);
+}
+.user-control-buttons-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.update-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+.reply-submit-container{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.update{
+  width: 100px;
+  margin-top: 8px;
+}
+.modal-delete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60%;
+}
+.modal-container{
+  background-color: white;
+  padding: 12px;
+  width: 50%;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.modal-buttons-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-delete-button{
+  background-color: hsl(358, 79%, 66%);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+.modal-cancel-button{
+  background-color: hsl(211, 10%, 45%);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.score-container-desktop{
+  display: none;
+}
+.control-buttons-container-desktop{
+  display: none;
+}
+.profile-img-desktop{
+  display: none;
+}
+.submit-button-desktop{
+  display: none;
+}
+
+@media screen and (min-width:375px)  {
+  .comment-interact-container{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .score-container-desktop{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80px;
+    width: 40px;
+    margin-right: 12px;
+  }
+  .control-buttons-container-desktop{
+    display: block;
+    margin-left: auto;
+  }
+  .comment-container{
+    display: flex;
+  }
+  .comments-container{
+    width: 60%;
+  }
+  .add-comment-wrapper{
+    width: 60%;
+  }
+  .reply-submit-container{
+    display: none;
+  }
+  .profile-img-desktop{
+    display: block;
+  }
+  .submit-button-desktop{
+    display: block;
+    height: 40px;
+    margin-left: 8px;
+  }
+  .add-reply-comment-container{
+    display: flex;
+  }
+  .replies-container{
+    margin-left: 12px;
+    padding-left: 12px;
+  }
+  .modal-delete{
+    margin-top: 20%;
   }
 }
