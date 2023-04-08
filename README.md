@@ -25,12 +25,13 @@ Users should be able to:
 - **Bonus**: Instead of using the `createdAt` strings from the `data.json` file, try using timestamps and dynamically track the time since the comment or reply was posted.
 
 ### Screenshot
+![mobile_view](https://user-images.githubusercontent.com/30923105/230710106-902ee972-480c-4df3-8c11-ffd5502b25ca.png)
+![desktop_view](https://user-images.githubusercontent.com/30923105/230710123-4f137cd4-4ca7-45db-98c4-0e6609f67f4d.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://643119b806fb266c4628df0f--clever-peony-92c2cf.netlify.app/
 
 ## My process
 
